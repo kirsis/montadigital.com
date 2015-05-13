@@ -1,0 +1,20 @@
+name: An iOS / Mac Development Agency
+markdown: redcarpet
+exclude: ['vendor', 'preview-build-config', 'Gemfile', 'Gemfile.lock', 'deploy.sh', 'bootstrap.config.json', 'browserconfig.xml', 'README.md']
+highlighter: pygments
+permalink: /blog/:year/:month/:day/:title/
+simple_form_token: 9140faafd24cbbda68f747223647a7d2
+
+zen_pomodoro:
+  itunes_url: https://itunes.apple.com/US/app/id723888300?mt=8
+
+# this goes inside _config.yml. Change as required
+navigation:
+- text: Home
+  url: /index.html
+#- text: About Us
+#  url: /about.html
+- text: Locations
+  url: /locations
+- text: Contact Us
+  url: /contact.html

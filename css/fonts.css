@@ -1,0 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,500,700&subset=latin,latin-ext);
+
+* {
+  font-family: "Avenir Next", "Lato", sans-serif !important;
+}
+
+h1,h2,h3,h4,p {color:#4A4A4A;}
+.light {color:#FFF}
+
+p {font-size:14px;}
+.small {font-size:10px;}
+.intro {font-size:18px;}
+h1,h2,h3,h4 {font-weight:700;}
+h1 { font-size:36px; }
+h2 { font-size:30px; }
+h3 { font-size:24px; }
+h4 { font-size:20px; }
+
+

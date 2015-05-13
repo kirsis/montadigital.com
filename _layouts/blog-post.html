@@ -1,0 +1,44 @@
+---
+layout: main
+body-class: light
+---
+
+{% capture hero_url %}/images/{{page.hero-image}}.jpg{% endcapture %}
+
+{% for static_file in site.static_files %}
+    {% if static_file.path == %hero_url% %}
+        {% assign hero_exists = true %}
+    {% endif %}
+{% endfor %}
+
+{% if hero_exists %}
+<style type="text/css">
+#blog-post-header {
+  background-image: url({{hero_url}});
+}
+</style>
+<figure id="blog-post-header">
+    <div class="header-box">
+        <h1 class="light">{{page.title}}</h1>
+    </div>
+</figure>
+{% else %}
+<style type="text/css">
+#blog-post-header {
+  padding:inherit;
+  height:200px;
+}
+
+</style>
+<figure id="blog-post-header">
+    <div class="header-box">
+        <h1>{{page.title}}</h1>
+    </div>
+</figure>
+{% endif %}
+
+
+
+<div class="text-container">
+{{content}}
+</div>

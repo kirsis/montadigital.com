@@ -1,0 +1,127 @@
+---
+layout: main
+title: Blog
+body-class: light
+permalink: blog/
+---
+
+<style type="text/css">
+.all-posts {
+    list-style-type:none;
+    width:100%;
+    padding:0;
+    margin:0;
+}
+/*.all-posts .img h3 {
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    margin:0;
+    padding:0;
+}*/
+.all-posts .img {
+    /*position:relative;*/
+    /*width:100%;*/
+    /*float:left;*/
+    /*height:150px;*/
+    width:100%;
+    height:200px;
+    /*height:200px;*/
+    /*border:1px solid red;*/
+    /*margin:45px 15px 15px 15px;*/
+    background-size:cover;
+    background-position:50% 50%;
+}
+.all-posts li:last-of-type:after {
+    display:none;
+}
+.all-posts h2 {margin-bottom:0;}
+.all-posts li div.inbetween {padding-bottom:0;}
+.all-posts li:after {
+    content: "¶";
+    clear:both;
+    color:#A8A8A8;
+    text-align:center;
+    width:100%;
+    display:block;
+    margin:25px 0 40px 0;
+}
+.all-posts .subheading {
+    font-size:10px;
+    /*color:white;*/
+    font-weight:normal;
+    /*color:#4A4A4A;*/
+    display:block;
+    /*text-align:left;*/
+    /*background:#4A4A4A;*/
+}
+.row {
+    /*border:1px solid red;*/
+}
+.post-box {
+    /*padding:0;*/
+}
+
+.post-box figure {
+    border:1px solid #4A4A4A;
+    background-position:50% 50%;
+    background-size:cover;
+    width:100%;
+    height:200px;
+    position:relative;
+}
+.post-container {
+    margin-top:15px;
+    max-width:1030px;
+}
+.post-box h1 {
+    font-size:18px;
+    position:absolute;
+    bottom:0px;
+    margin:0;
+    left:0px;
+    background: rgba(0,0,0,0.5);
+    padding:15px;
+}
+.post-box .small.light {
+    background:#4A4A4A;
+}
+
+.post-box .small {
+    margin:0;
+    padding:5px 0;
+}
+</style>
+
+<!-- <div class="inbetween">
+    <p class="intro">We believe that writing helps clarify and solidify knowledge about the topic at hand. This is why we try to put down aspects of our work into words.</p>
+    </p>
+    <p>Here is a list of every article we have written, sorted by date (newest on top).</p> 
+</div> -->
+
+<div class="container-fluid post-container">
+    {% assign idx = 0 %}
+    {% for post in site.posts %}
+        {% cycle 'open_row': '<div class="row">', nil, nil, nil %}
+        <div class="post-box col-md-3 col-sm-6">
+            <a href="{{ post.url }}">
+                {% if post.hero-image %}
+                <figure style="background-image:url(/images/{{post.hero-image}}.jpg)">
+                {% else %}
+                <figure style="background:red">
+                {% endif %}
+                    <h1 class="light">{{ post.title }}</h1>
+                </figure>
+            </a>
+
+            <p class="small ">{{post.date | date: '%B %d, %Y'}}</p>
+            <p>{{ post.description }}</p>
+            <p><a href="{{ post.url }}">Continue reading</a></p>
+        </div>
+        {% cycle 'close_row': nil, nil, nil, '</div>' %}
+    {% endfor %}
+    {% cycle 'close_row': nil, '</div>', '</div>', '</div>' %}
+</div>
+<!-- ended -->
+
+
