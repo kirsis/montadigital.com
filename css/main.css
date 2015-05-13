@@ -14,7 +14,7 @@ div, footer, section {
     box-sizing:border-box;
 }
 
-::-moz-selection {
+/*::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
 }
@@ -22,7 +22,7 @@ div, footer, section {
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
-}
+}*/
 
 hr {
     display: block;
@@ -96,6 +96,24 @@ textarea {
 }
 
 /* ==========================================================================
+   Image attribution page
+   ========================================================================== */
+
+.cc-attribution-box figure { 
+    height:200px;
+    background-position:50% 50%;
+    background-size:cover; 
+}
+.light.attribution .container-fluid {
+    padding:0;
+}
+
+.cc-attribution-box ul {
+    list-style-type:none;
+    padding:0;
+}
+
+/* ==========================================================================
    Header and Footer
    ========================================================================== */
 
@@ -118,9 +136,9 @@ header, footer {
 }
 
 footer {margin-top:30px;clear:both;}
-footer > div {float:none}
-footer > div p {margin-bottom:0}
-footer > div p:last-of-type {margin:0}
+footer > div {float:none;margin-top:1em}
+footer > div p {margin:0}
+footer > div p:last-of-type {margin-top:1em}
 footer ul#footer-contacts { 
     float:right; 
     list-style-type:none;
