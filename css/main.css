@@ -118,7 +118,9 @@ header, footer {
 }
 
 footer {margin-top:30px;clear:both;}
-footer p#footer-copyright { float:left; }
+footer > div {float:none}
+footer > div p {margin-bottom:0}
+footer > div p:last-of-type {margin:0}
 footer ul#footer-contacts { 
     float:right; 
     list-style-type:none;
@@ -680,8 +682,8 @@ figure.location-bergen {
         width:100%;
     }
 
-    footer ul#footer-contacts, footer p#footer-copyright {float:none;}
-    footer ul#footer-contacts {text-align:left;margin-left:0;padding-left:0;}
+    footer ul#footer-contacts, footer > div {float:none}
+    footer ul#footer-contacts {text-align:left;margin-left:0;padding-left:0}
 
     nav {
         width:100%;

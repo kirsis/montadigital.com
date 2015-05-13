@@ -4,15 +4,15 @@ This repository contains the source code for the [Monta Digital website](http://
 
 ## Dependencies
 
-The *Jekyll* ruby gem is required to build the website.
+The [*Jekyll* ruby gem](http://jekyllrb.com) is required to build the website.
 
-Install jekyll with:
+Install *jekyll* with:
 
     gem install jekyll
 
-A deploy script is included that requires the *s3_website* ruby gem.
+A deploy script is included that requires the [*s3_website* ruby gem](https://github.com/laurilehmijoki/s3_website).
 
-Install s3\_website with:
+Install *s3\_website* with:
 
     gem install s3_website
     
