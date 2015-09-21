@@ -1,2 +1,4 @@
 _site/
 .env
+.bundle
+vendor/bundle
